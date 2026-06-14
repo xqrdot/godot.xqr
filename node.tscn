@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bhss2rc30pepk"]
+
+[ext_resource type="PackedScene" uid="uid://dasabj0i5wtrx" path="res://addons/real-controller/character.tscn" id="1_sy5k4"]
+
+[sub_resource type="Sky" id="Sky_nxiqb"]
+
+[sub_resource type="Environment" id="Environment_sy5k4"]
+sky = SubResource("Sky_nxiqb")
+glow_enabled = true
+fog_enabled = true
+fog_light_energy = 0.65
+fog_density = 0.02
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+
+[node name="Node" type="Node" unique_id=1437813512]
+
+[node name="Node3D" type="Node3D" parent="." unique_id=859431673]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Node3D" unique_id=1244213262]
+transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 12, -0.0035467148, -0.48138285, 0.004509449)
+use_collision = true
+size = Vector3(9, 1, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Node3D" unique_id=1778376663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 4.5, 5, -6)
+use_collision = true
+size = Vector3(30, 10, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Node3D" unique_id=395735827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, -2, 0.5, -2.5)
+use_collision = true
+size = Vector3(1, 1, 0.5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Node3D" unique_id=2108565848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, -5.5, 3, 1)
+use_collision = true
+size = Vector3(2, 6, 6)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D" unique_id=2110001756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4607673, 3, -4)
+light_color = Color(1, 0, 1, 1)
+light_energy = 3.302
+light_volumetric_fog_energy = 5.346
+shadow_enabled = true
+omni_range = 22.074842
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Node3D" unique_id=1736518743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6673646, 3, 3.034946)
+light_color = Color(0, 1, 1, 1)
+light_energy = 3.302
+light_volumetric_fog_energy = 5.346
+shadow_enabled = true
+omni_range = 10.255441
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D" unique_id=376285954]
+transform = Transform3D(-0.8404625, 0.4820579, -0.24747331, -0.43546107, -0.32906622, 0.8379075, 0.32248485, 0.8119949, 0.4864852, 11.173851, 4.7944503, 0)
+light_energy = 0.1
+shadow_enabled = true
+shadow_opacity = 0.32
+shadow_blur = 4.246
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=341937473]
+environment = SubResource("Environment_sy5k4")
+
+[node name="Character" parent="." unique_id=1913778194 instance=ExtResource("1_sy5k4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+jump_velocity = 4.1
+controller_support = false
+camera_distance = 5.7
+allow_camera_mode_switch = true
