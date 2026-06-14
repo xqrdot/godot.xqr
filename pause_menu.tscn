@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bxi5eyfunkp0m"]
+
+[ext_resource type="Script" uid="uid://bw6kx1jcq1bi3" path="res://pause_menu.gd" id="1_hdmo1"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1582809208]
+
+[node name="PauseMenu" type="Control" parent="." unique_id=1885681080]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_hdmo1")
+
+[node name="Panel" type="Panel" parent="PauseMenu" unique_id=1133160448]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu" unique_id=1021495788]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -62.0
+offset_right = 82.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PauseMenu/VBoxContainer" unique_id=2050643205]
+layout_mode = 2
+text = "Game paused"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="PauseMenu/VBoxContainer" unique_id=1174086388]
+layout_mode = 2
+text = "Resume"
+
+[node name="Quit" type="Button" parent="PauseMenu/VBoxContainer" unique_id=1586356770]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Resume" to="PauseMenu" method="_on_resume_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Quit" to="PauseMenu" method="_on_quit_pressed"]

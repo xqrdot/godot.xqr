@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bhss2rc30pepk"]
 
+[ext_resource type="Script" uid="uid://bxyps76tlmmk0" path="res://main_scene.gd" id="1_112p8"]
 [ext_resource type="PackedScene" uid="uid://dasabj0i5wtrx" path="res://addons/real-controller/character.tscn" id="1_sy5k4"]
+[ext_resource type="PackedScene" uid="uid://bxi5eyfunkp0m" path="res://pause_menu.tscn" id="2_j2q8x"]
 
 [sub_resource type="Sky" id="Sky_nxiqb"]
 
@@ -13,7 +15,8 @@ fog_density = 0.02
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.02
 
-[node name="Node" type="Node" unique_id=1437813512]
+[node name="Node" type="Node3D" unique_id=1759286030]
+script = ExtResource("1_112p8")
 
 [node name="Node3D" type="Node3D" parent="." unique_id=859431673]
 
@@ -67,5 +70,7 @@ environment = SubResource("Environment_sy5k4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 jump_velocity = 4.1
 controller_support = false
-camera_distance = 5.7
+camera_distance = 3.7
 allow_camera_mode_switch = true
+
+[node name="CanvasLayer" parent="." unique_id=1582809208 instance=ExtResource("2_j2q8x")]
