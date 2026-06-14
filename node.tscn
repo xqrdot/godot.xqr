@@ -371,6 +371,9 @@ shadow_blur = 4.246
 
 [node name="Character" parent="." unique_id=1913778194 instance=ExtResource("1_sy5k4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+speed = 4.1
+walk_speed = 2.3
+sprint_speed = 6.1
 controller_support = false
 camera_distance = 3.7
 allow_camera_mode_switch = true
